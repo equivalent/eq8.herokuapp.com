@@ -1,0 +1,44 @@
+stackoverflow:
+  icon: 'fa-stack-overflow'
+  title: 'Stack Overflow'
+  url:  'http://stackoverflow.com/users/473040/equivalent8'
+
+coderstats:
+  icon:  'fa-code'
+  title: 'CoderStats'
+  url:   'http://coderstats.net/github/equivalent/'
+
+twitter:
+  icon: 'fa-twitter'
+  title: 'Twitter'
+  url:  'https://twitter.com/equivalent8'
+
+github:
+  icon: 'fa-github'
+  title: 'Github'
+  url:  'https://github.com/equivalent/'
+
+linkedin:
+  icon: 'fa-linkedin'
+  title: 'LinkedIn'
+  url:  'http://www.linkedin.com/in/tomasvalent'
+
+careers_stackoverflow:
+  icon: 'fa-stack-exchange'
+  title: 'Careers Stack Overflow'
+  url:  'http://careers.stackoverflow.com/equivalent'
+
+rubygems:
+  icon:  'fa-cube'
+  title: 'RubyGems'
+  url:   'https://rubygems.org/profiles/equivalent'
+
+blogger:
+  icon: 'fa-google'
+  title: 'Blogger micro-blog'
+  url:  'http://ruby-on-rails-eq8.blogspot.com/'
+
+typeracer:
+  icon: 'fa-keyboard-o'
+  title: 'Type Racer'
+  url: 'http://data.typeracer.com/pit/profile?user=equivalent8'

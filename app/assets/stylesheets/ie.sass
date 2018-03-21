@@ -1,0 +1,12 @@
+html
+  body#frontpage
+    ul
+      @for $i from 1 through 9
+        li.x#{$i}
+          display: none
+          position: absolute
+          left: 9999
+          z-index: -99
+
+    article
+      min-height: 600px

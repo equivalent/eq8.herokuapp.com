@@ -1,0 +1,160 @@
+@import 'prism'
+@import 'foundation_and_overrides'
+@import 'font-awesome'
+@import 'frontpage'
+@import 'svgs'
+
+.button
+  i.fa
+    margin-right: 1em
+
+pre
+  margin:
+    bottom: 1em
+
+i.large-icon
+  font-size: 60px
+
+.hidden
+  display: none
+
+footer
+  color: tan
+  text-shadow: 2px 2px black
+  background:
+    color: #513e0c
+    image: image-url("footer-bg1.png")
+    repeat: repeat-x, repeat
+  border-top: 3px solid #006400
+  display: block
+  margin:
+    top: 500px
+  min-height: 300px
+
+  a
+    color: #CC9900
+    &:hover, &:focus
+      color: gold
+
+  h2
+    display: none
+    font-size: 1.5em
+
+  .footer-content
+    margin:
+      top: -200px
+
+  #person
+    text-align: center
+    img
+      border: none
+      border-radius: 30px
+      opacity: 0.8
+      filter: alpha(opacity=80)
+      -moz-box-shadow:    1px 1px 5px 2px black
+      -webkit-box-shadow: 1px 1px 5px 2px black
+      box-shadow:         1px 1px 5px 2px black
+
+  #projects
+    ul
+      list-style: none outside none
+      margin: 0
+
+  #developer-profiles
+    ul
+      font-size: 5em
+      li
+        margin:
+          bottom: 10px
+          right:  10px
+        span
+          display: none
+    a
+      line-height: 0
+
+  #legal
+    margin-top: 2em
+    p, div
+      font-size: 0.6em
+      margin-bottom: 0px
+
+article
+  section
+    margin:
+      top: 2em
+
+.top-bar
+  z-index: 9999
+
+.published
+  color: grey
+
+body
+  article
+    code
+      background-color: inherit
+      border-width: 0
+      border-style: none
+      border-color: none
+
+@media #{$small-up}
+  footer
+    #projects
+      h2
+        font-size: 1em
+        display: block
+        color: tan
+      span
+        display: none
+      ul
+        font-size: 3em
+    #developer-profiles
+      h2
+        font-size: 1em
+        display: block
+        color: tan
+    #legal
+      text-align: center
+
+  body#frontpage
+    article
+      header
+        height: 200px
+      hgroup
+        h1
+          font-size: 3em
+        p
+          font-size: 1.2em
+
+@media #{$medium-up}
+  body#frontpage
+    article
+      header
+        height: 380px
+      hgroup
+        h1
+          font-size: 5em
+        p
+          font-size: 1.5em
+
+@media #{$large-up}
+  body#frontpage
+    article
+      hgroup
+        h1
+          font-size: 9em
+        p
+          font-size: 2em
+  footer
+    #projects
+      span
+        display: inline
+      ul
+        font-size: 1em
+      h2
+        display: none
+    #developer-profiles
+      h2
+        display: none
+    #legal
+      text-align: left

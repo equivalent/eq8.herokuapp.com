@@ -1,0 +1,8 @@
+%form
+  .row
+    .large-1.columns
+      = link_to resource.url, title: 'Show on Github' do
+        %i.fa.fa-github.large-icon
+    .large-11.columns
+      %label Raw file
+      %input{value: resource.url, readonly: 'readonly', type: 'text'}

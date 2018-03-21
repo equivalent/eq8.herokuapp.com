@@ -1,0 +1,145 @@
+html
+  height: auto !important
+body#frontpage
+  height: auto !important
+
+  //background-image: linear-gradient(rgb(191,223,255) 0%,rgba(239,255,191,0.55) 49%,rgba(255,220,115,0.3) 76%,rgba(255,115,115,0.08) 100%)
+  background-image: linear-gradient(rgb(191,223,255) 0%,rgba(239,255,191,0.55) 90%, rgba(255,220,115,0.3) 100%)
+  overflow-x: hidden
+  margin: 0px
+  article
+    min-height: 400px
+    text-align: center
+    header
+      height: 400px
+    hgroup
+      margin:
+        top: 140px
+      h1, h2, h3, h4, h5, h6
+        font-family: 'Cherry Swash', Verdana
+      h1
+        font-size: 9em
+        font-weight: bold
+        span
+          color: #333
+      h2
+        margin:
+          top: -20px
+        font-size: 1em
+        &:before
+          content: "("
+        &:after
+          content: ")"
+      p
+        font-size: 2em
+    section#skils
+      margin:
+        top: -650px
+      ul
+        list-style-type: none
+        li
+          width: 200px
+          height: 60px
+          background: #fff
+          border-radius: 200px
+          position: relative
+          text-align: center
+          span
+            width: 160px
+            display: block
+            margin:
+              left: 20px
+          &:before, &:after
+            content: ''
+            position: absolute
+            background: #fff
+            width: 100px
+            height: 80px
+            position: absolute
+            top: -15px 
+            left: 10px
+            z-index: -6
+            border-radius: 100px
+            transform: rotate(30deg)
+
+          &:after
+            width: 120px
+            height: 120px
+            top: -55px
+            left: auto
+            right: 15px
+
+.sign
+  text-align: left
+  max-width: 570px
+  margin: 0 auto
+
+@for $i from 1 through 9
+  body#frontpage
+    .x#{$i}
+      $decr: 0.06
+      -webkit-animation-name: moveclouds
+      animation-name: moveclouds
+
+      -webkit-animation-duration: 10s + ( $i * 35)
+      animation-duration: 10s + ( $i * 35)
+
+      -webkit-animation-timing-function: linear
+      animation-timing-function: linear
+
+      -webkit-animation-iteration-count: infinite
+      animation-iteration-count: infinite
+
+      -webkit-transform: scale(1.0 + $decr - ($decr * $i))
+      -ms-transform: scale(1.0 + $decr - ($decr * $i))
+      transform: scale(1.0 + $decr - ($decr * $i))
+
+      opacity: 1.0 - ($decr * $i)
+      z-index: -5 + round(20/$i ) !important
+
+body#frontpage
+  .x1
+    top: 300px
+    right: 600px
+  .x2
+    top: 30px
+    right: -500px
+  .x3
+    top: 100px
+    right: 450px
+  .x4
+    top: 10px
+    right: -20px
+  .x5
+    right: -40px
+    top: 60px
+  .x6
+    right: -400px
+    top: 120px
+  .x7
+    right: 800px
+    top: -309px
+  .x8
+    right: -800px
+    top: -280px
+  .x9
+    right: -1000px
+    top: -150px
+
+@-webkit-keyframes moveclouds
+  0%
+    margin-left: 1000px
+  100% 
+    margin-left: -1000px
+
+@-moz-keyframes moveclouds
+  0%
+    margin-left: 1000px
+  100%
+    margin-left: -1000px
+
+@-o-keyframes moveclouds
+  0%
+    margin-left: 1000px
+  100%
+    margin-left: -1000px

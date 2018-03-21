@@ -1,0 +1,30 @@
+%header
+  %hgroup
+    %h1{:itemprop => "additionalName"} <span>Equi</span>valent
+    %h2{:itemprop => "name"} Tomas Valent
+    %p{:itemprop => "jobTitle"} Full Stack Ruby on Rails developer
+
+.sign{:itemprop => "address", :itemscope => "itemscope", :itemtype => "http://schema.org/PostalAddress"}
+  %p
+    I'm <span itemprop="addressLocality">London<span> <small itemprop="addressCountry">GB</small> based
+    full stack web developer that specialize in Ruby programming language related technologies
+    with several professional years in companies focusing on developing
+    Social networks, EdTech, e-commerce or commercial dashboard web-application.
+
+  %p
+    For more career information please check my #{link_to @linkedin.title, @linkedin.url}
+    and #{link_to @so_careers.title, @so_careers.url} profile.
+
+  %p
+    I hope that web developers would enjoy my #{link_to 'web-developer Blog', blogs_path}, my #{link_to 'T.I.L. Blog', tils_path},
+    my #{link_to 'tweets', @twitter.url} and my code at #{link_to @github.title, @github.url}.
+
+
+%section#skils
+  %h1.hidden Some of my key specializations
+  %ul
+    - i = 0
+    - Specialization.all.each do |tech|
+      - i += 1
+      %li{ class: "x#{i}"}
+        %span= tech

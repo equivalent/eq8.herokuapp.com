@@ -1,0 +1,28 @@
+%nav.top-bar{"data-topbar" => ""}
+  %ul.title-area
+    %li.name
+      %hgroup
+        %h1
+          = link_to root_path do
+            Equi<strong>valent</strong>
+        .hidden
+          Ruby on Rails developer
+
+    %li.toggle-topbar
+      %a{href: "#"}
+        Menu
+        %i.fa.fa-align-justify
+
+  %section.top-bar-section
+    %ul.left
+      %li{ class: ('active' if controller_name == 'blogs') }
+        = link_to "Articles", blogs_path
+      %li{ class: ('active' if controller_name == 'talks') }
+        = link_to "Talks", talks_path
+      %li{ class: ('active' if controller_name == 'tils') }
+        = link_to "TIL", tils_path
+
+    %ul.right.show-for-medium-up
+      %li
+        = link_to blogs_path(format: :rss), title: "Blogs RSS" do
+          %i.fa.fa-rss

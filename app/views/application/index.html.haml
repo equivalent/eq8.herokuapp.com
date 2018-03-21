@@ -1,0 +1,15 @@
+= render 'notice'
+
+-if @sub_title
+  %h1= @sub_title
+- collection.each do |blog|
+  %section
+    %h2= blog.title
+    .row
+      .small-10.columns
+        = simple_format blog.description
+        .published Published #{published_date(blog)}
+        = show_button blog
+      .small-2.columns
+        = link_to blog.url, title: 'Show on Github' do
+          %i.fa.fa-github.large-icon

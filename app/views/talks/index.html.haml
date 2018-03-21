@@ -1,0 +1,9 @@
+= render 'notice'
+- collection.each do |blog|
+  %section
+    %h1= blog.title
+    .row
+      .small-10.columns
+        = simple_format blog.description
+        .published Published #{published_date(blog)}
+        = show_button blog

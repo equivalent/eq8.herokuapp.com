@@ -1,0 +1,38 @@
+<!-- Grass by cyberscooty from openclipart.org, Rabit by Equivalent ...Time to run Alice !!! mu-he-he -->
+%footer
+  .footer-content.row
+    #developer-profiles.small-12.large-4.right.columns
+      %h2 Public web-developer profiles
+      %ul.inline-list
+        - DeveloperProfile.all.each do |profile|
+          %li= icon_link profile.to_social_hash
+
+    #person.show-for-large-up.large-4.right.columns
+      = image_tag 'http://www.gravatar.com/avatar/c2713a4959692f16d27d2553fb06cc4b.png?r=x&s=170'
+
+    .small-12.large-4.left.columns
+      #projects
+        %h2 Projects
+        %ul
+          %li
+            = link_to 'https://github.com/equivalent/scrapbook2',
+              title: 'Scrapbook (developer notes)' do
+              %i.fa.fa-github
+              Scrapbook <span>(developer notes)</span>
+
+          %li
+            = link_to 'https://github.com/equivalent/scrapbook2/tree/master/archive/blogs',
+              title: 'Github sources to all blogs' do
+              %i.fa.fa-github
+              <span>Github sources to all</span> Blogs
+          %li
+            = link_to blogs_path(format: :rss), title: "Blogs RSS" do
+              %i.fa.fa-rss
+              Blogs RSS <span class="show-for-medium-up">feed</span>
+
+
+      #legal
+
+        <a href="https://www.patreon.com/bePatron?u=6988196" data-patreon-widget-type="become-patron-button"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron!"></a>
+        %h2 Legal
+        %p Tomas Valent - #{Time.now.year}
